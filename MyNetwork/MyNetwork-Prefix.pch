@@ -13,4 +13,7 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #define HostName        @"https://api.foursquare.com/"
+    #define Client_Id       @"CMXDTX41EITPPW1GDNKSK3FAB0L4PYFG0HHCBTZ0L3M30QOX"
+    #define Client_Secret   @"ZSJMMWS5HVXQLY4WVIESVRYEF4BTBMAZF3KPEYTP1G1V2BQM"
 #endif
