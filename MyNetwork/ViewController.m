@@ -8,7 +8,12 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+#import "XZHReachabilityManager.h"
+
+@interface ViewController () {
+//    UIView * view;
+}
+
 
 @end
 
@@ -18,6 +23,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    XZHReachabilityManager * manager = [XZHReachabilityManager managerForDomain:@"http://www.baidu.com"];
+    [manager setReachabilityChangedHandler:^(ReachabilityState changedState) {
+        NSLog(@"当前状态： %d\n" , changedState);
+    }];
+//    [manager startMonitoring];
+    
 }
 
 - (void)didReceiveMemoryWarning
